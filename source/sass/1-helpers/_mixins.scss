@@ -1,0 +1,309 @@
+//== Display Flex
+
+@mixin d-flex($value:flex) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: $value;
+}
+
+//== Inline Flex
+
+@mixin d-inline-flex($value:inline-flex) {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    
+}
+
+//== Flex
+
+@mixin flex($value) {
+    -webkit-box-flex: 0;
+    -ms-flex: $value;
+    flex: $value;
+}
+
+//== Order
+
+@mixin order($value) {
+    -webkit-box-ordinal-group: $value + 1;
+    -ms-flex-order: $value;
+    order: $value
+}
+
+//== Flex Grow
+
+@mixin flex-grow($value) {
+    -webkit-box-flex: $value;
+    -ms-flex-positive: $value;
+    flex-grow: $value;
+}
+
+//== Flex Wrap
+
+@mixin flex-wrap($value) {
+    
+    @if $value == 'wrap'{
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    @if $value == 'nowrap'{
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+    
+    @if $value == 'initial'{
+        -ms-flex-wrap: initial;
+        flex-wrap: initial;
+    }
+    
+    @if $value == 'inherit'{
+        -ms-flex-wrap: inherit;
+        flex-wrap: inherit;
+    }
+    
+}
+
+// Flex Direction
+
+@mixin flex-direction($value) {
+    
+    @if $value == 'row'{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    
+    @if $value == 'nowrap'{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+    
+    @if $value == 'column'{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    
+    @if $value == 'column-reverse'{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+    
+    @if $value == 'initial'{
+        -webkit-box-orient: initial;
+        -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+        flex-direction: initial;
+    }
+    
+    @if $value == 'inherit'{
+        -webkit-box-orient: inherit;
+        -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+        flex-direction: inherit;
+    }
+    
+}
+
+//== Justify Content
+
+@mixin justify-content($value) {
+    
+    @if $value == 'flex-start'{
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    
+    @if $value == 'flex-end'{
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    
+    @if $value == 'center'{
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    
+    @if $value == 'space-between'{
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    
+    @if $value == 'space-around'{
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    
+    @if $value == 'initial'{
+        -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+        justify-content: initial;
+    }
+    
+    @if $value == 'inherit'{
+        -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+    }
+    
+}
+
+//== Align Content
+
+@mixin align-content($value) {
+    
+    @if $value == 'stretch'{
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    }
+    
+    @if $value == 'center'{
+        -ms-flex-line-pack: center;
+        align-content: center;
+    }
+    
+    @if $value == 'flex-start'{
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+    }
+    
+    @if $value == 'flex-end'{
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+    }
+    
+    @if $value == 'space-between'{
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+    }
+    
+    @if $value == 'space-around'{
+        -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    }
+    
+    @if $value == 'initial'{
+        -ms-flex-line-pack: initial;
+        align-content: initial;
+    }
+    
+    @if $value == 'inherit'{
+        -ms-flex-line-pack: inherit;
+        align-content: inherit;
+    }
+    
+}
+
+//== Align Items
+
+@mixin align-items($value) {
+    
+    @if $value == 'flex-start'{
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    
+    @if $value == 'flex-end'{
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+    
+    @if $value == 'stretch'{
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+    
+    @if $value == 'baseline'{
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+    }
+    
+    @if $value == 'center'{
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    @if $value == 'initial'{
+        -webkit-box-align: initial;
+        -ms-flex-align: initial;
+        align-items: initial;
+    }
+    
+    @if $value == 'inherit'{
+        -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+    }
+    
+}
+
+//== Align Self
+
+@mixin align-self($value) {
+    
+    @if $value == 'auto'{
+        -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+    }
+    
+    @if $value == 'flex-start'{
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
+    
+    @if $value == 'flex-end'{
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+    }
+    
+    @if $value == 'stretch'{
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    }
+    
+    @if $value == 'baseline'{
+        -ms-flex-item-align: baseline;
+        align-self: baseline;
+    }
+    
+    @if $value == 'center'{
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+    
+    @if $value == 'initial'{
+        -ms-flex-item-align: initial;
+        -ms-grid-row-align: initial;
+        align-self: initial;
+    }
+    
+    @if $value == 'inherit'{
+        -ms-flex-item-align: inherit;
+        -ms-grid-row-align: inherit;
+        align-self: inherit;
+    }
+    
+}
+
+
+

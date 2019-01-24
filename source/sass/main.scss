@@ -1,0 +1,58 @@
+/** 
+ *	Theme Name: Starter Project
+ *	Theme URI: https://github.com/ashrafuloli/Starter-Project-Gulp
+ *	Author: ashrafuloli
+ *	Author URI: https://ashrafuloli.com/
+ *	Description: Starter Template is multipurpose theme based template. Its built with all modern approaches such as Bootstrap 4.1.3, Sass, Node js & Gulp js. Its simple & smart. Its perfect for any Startup Business, Companies, Agencies which need a professional way to showcase their projects and services.
+ *	Tags: Starter Project, Quick Start
+ *	Version: 1.0.0
+ */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+    1.0 Base Style
+        1.1 Selection Style
+        1.1 Link Style
+        1.1 Image style
+    2.0 Typrography Style
+        2.1 Headings style
+        2.2 Peragraph Style
+    3.0 Spacing Style
+    3.0 Section Style
+    4.0 Button Style
+        4.1 Button Size Style
+        4.2 Button Outline Style
+    5.0 Layout
+        5.1 Nav Style
+    6.0 Modules
+        6.1 Video Style
+    8.0 Pages
+        8.1 Home Page Style
+--------------------------------------------------------------*/
+
+
+// 1 - HELPERS
+@import '1-helpers/variables';
+@import '1-helpers/functions';
+@import '1-helpers/mixins';
+
+
+// 2 - BASICS
+@import '2-basics/base';
+@import '2-basics/typography';
+@import '2-basics/spacing';
+@import '2-basics/selection';
+@import '2-basics/buttons';
+
+
+// 3 - LAYOUT
+@import '3-layout/nav';
+
+
+// 4 - MODULES
+@import '4-modules/flex-video';
+
+
+// 5 - PAGES
+@import '5-pages/page-home';

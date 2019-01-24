@@ -1,0 +1,70 @@
+//== 2.0 Typrography Style
+
+
+small{
+    font-size: 10px;
+  line-height: 1.2;
+}
+
+em{
+    font-style: italic;
+}
+
+strong{
+    font-weight: bold;
+}
+
+//== 2.1 Headings style
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: $heading;
+    font-weight: bold;
+    font-family: $header_fonts;
+    font-weight: 900;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+h1{
+    font-size: 68px;
+    line-height: 1.05;
+}
+
+h2{
+    font-size: 42px;
+    line-height: 1.14;
+}
+
+h3{
+    font-size: 26px;
+    line-height: 1.38;
+}
+
+h4{
+    font-size: 22px;
+    line-height: 1.38;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+
+//== 2.2 Peragraph Style
+
+p{
+    margin: 0 0 20px 0;
+    font-weight: 400;
+    font-size: 14px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}

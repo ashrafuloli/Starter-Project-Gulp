@@ -1,0 +1,147 @@
+//== Remove Browzer Default Style
+
+@mixin appearance($none){
+    -webkit-appearance: $none;
+    -moz-appearance: $none;
+    appearance: $none;
+}
+
+//== Transform
+
+@mixin transform($value) {
+    -webkit-transform: $value;
+    -ms-transform: $value;
+    transform: $value;
+}
+
+
+//== Transition
+
+@mixin transition($value) {
+    -webkit-transition: $value;
+    -o-transition: $value;
+    transition: $value;
+}
+
+//== Box Shadow
+
+@mixin box-shadow($content) {
+    -webkit-box-shadow: $content;
+    box-shadow: $content;
+}
+
+//== Placeholder
+
+@mixin placeholder {
+    &::-webkit-input-placeholder{
+        @content;
+    }
+    &:-moz-placeholder{
+        @content;
+    }
+    &::-moz-placeholder{
+        @content;
+    }
+    &:-ms-input-placeholder{
+        @content;
+    }
+}
+
+//== Animation Keyframes
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+//== Animation
+
+@mixin animate($name, $duration, $iteration, $direction) {
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+    
+    -webkit-animation-iteration-count: $iteration;
+    -moz-animation-iteration-count: $iteration;
+    -o-animation-iteration-count: $iteration;
+    animation-iteration-count: $iteration;
+    -webkit-animation-name: $name;
+    -moz-animation-name: $name;
+    -o-animation-name: $name;
+    animation-name: $name;
+    
+    -webkit-animation-direction: $direction;
+    -moz-animation-direction: $direction;
+    -o-animation-direction: $direction;
+    animation-direction: $direction;
+}
+
+
+/** 
+ *	Media Quary
+ *	--------------
+ *	XL Device = 1200px 
+ * 	LG Device = 992px 
+ * 	MD Device = 768px 
+ * 	Extra small Device 
+ * 	SM Small Device = 550px 
+ */
+
+@mixin mq($value){
+
+	@if $value == 'xl'{
+		/* XL Device :1200px. */
+		@media (min-width: 1200px) and (max-width: 1500px){
+			@content;
+		}
+	}
+
+	@if $value == 'lg'{
+		@media (min-width: 992px) and (max-width: 1200px){
+			@content;
+		}
+	}
+
+	@if $value == 'md'{
+		@media (min-width: 768px) and (max-width: 991px){
+			@content;
+		}
+	}
+
+	@if $value == 'xs'{
+		@media (max-width: 767px) {
+			@content;
+		}
+	}
+
+	@if $value == 'sm'{
+		@media only screen and (min-width: 576px) and (max-width: 767px){
+			@content;
+		}
+	}
+
+}
+
+
+/** 
+ *	Custom Media Query
+ *	--------------
+ *	Max-Width - Max-Width
+ */
+
+@mixin cmq($min , $max){
+	@media (min-width: $min) and (max-width: $max){
+		@content;
+	}
+}
