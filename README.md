@@ -42,7 +42,7 @@ The `gulp` command is the best choice for you most likley. Go to the project fol
 
 Once you have the project running in the terminal you can delete the partial
 ```
-sources/sass/6-pages.sass
+sources/sass/5-pages.sass
 ```
 It's purpose is purley to get you started and have something "schmancy" on the screen when it launches. delete it and start writing your very own "schmancy" code for your project.
 
