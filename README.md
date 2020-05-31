@@ -1,4 +1,4 @@
-# Starter Project Gulp
+# Gulp Pack
 **Inspired by Jesse Showalter Website Project Starter Kit**
 ```
 https://github.com/jesseshowalter/jesseshowalter-starter-project
